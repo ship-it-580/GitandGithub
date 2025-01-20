@@ -1,6 +1,8 @@
 # Gitti ja Gittihubi ohjeet
 Gitti on versionhallintatyökalu, eka träkätään tiedostoa ja sitten lisätään indexiin, minkä jälkeen se commitoidaan. 
 
+![glomblog](gitti.jpg)
+
 # Aloitus
 Eka aja terminaattorilla komennon, mikä tekee .git kansion:  ```git init```
 
@@ -31,6 +33,7 @@ Eka lisätään se pilvihaara komennolla ```git remote add <nimi> >github reposi
 Jos nimesit päähaaran vaikka masteriks tai muuten vaan haluut uudelleen nimetä haaran se tehdään ```git branch -m <haaran nimi> <uusi nimi>```
 Ne remote repository linkit näkee tällä ```git remote -v```
 
+![sanna](sanna_marin_committaa_gittiin.jpg)
 Jos haluu vilkaasta onko omat haarukset ajantasalla sen voi tehdä komennolla ```git fetch```
 Sitten vaan imaasoo viimestä huutoa olevat tiedostot ```git pull```
 
