@@ -1,7 +1,7 @@
 # Gitti ja Gittihubi ohjeet
 Gitti on versionhallintatyökalu, eka träkätään tiedostoa ja sitten lisätään indexiin, minkä jälkeen se commitoidaan. 
 
-![glomblog](gitti.jpg)
+<img src="gitti.jpg" width="600" />
 
 # Aloitus
 Eka aja terminaattorilla komennon, mikä tekee .git kansion:  ```git init```
@@ -18,12 +18,13 @@ sitten jos haluaa nähdä commitit tarkemmin niin siihen käytetään ```git log
   graph LR
   Työkansio --> |git add| Indeksi
   Indeksi --> |git commit| Commit
+  Commit --> |git push| GitHub
  ```
 
 Kun on tehny muutoksia niin pitää ensin lisätä tiedosto indexiin komennolla ```git add .<tiedoston nimi>``` tai jos laittaa kaiken niin ```git add .``` riittää\
 Sitten kun halutut tiedostot indexissä, ajaa vaan komennon ```git commit -m "tähä viesti mitä commitissa muutettin tai lisättiin"```\
 Jos paukautit väärän tiedoston indexiin, sen saa poist ```git unstage <tiedoston nimi>```\
-Jos on hyvä committi, mutta pikkasen huono sitä voi muokata komennolla ```git commit --amend -m "<muutos mitä tullu tehtyä>"```
+Jos on hyvä committi, mutta pikkasen huono sitä voi muokata komennolla ```git commit --amend -m "<muutos mitä tullu tehtyä>"
 
 ---
 # Haarat
@@ -38,25 +39,27 @@ Haaran voi poistaa komennolla ```git branch -d <haaran nimi>```
 gitGraph
   commit
   commit
-  branch KallenHaara
-  checkout KallenHaara
+  branch AleksinHaara
+  checkout AleksinHaara
   commit
   checkout main
-  branch PenanHaara
+  branch AnssinHaara
   commit
-  checkout KallenHaara
-  commit
-  checkout main
-  merge KallenHaara
-  commit
-  checkout PenanHaara
+  checkout AleksinHaara
   commit
   checkout main
-  merge PenanHaara
+  merge AleksinHaara
+  commit
+  checkout AnssinHaara
+  commit
+  checkout main
+  merge AnssinHaara
   commit
 ```
 ---
-![sanna](sanna_marin_committaa_gittiin.jpg)
+
+  <img src="sanna_marin_committaa_gittiin.jpg" width="600" />
+  
 # GitHubista vetely
 Eka lisätään se pilvihaara komennolla ```git remote add <nimi> >github repositoryn url linkki>```\
 Jos nimesit päähaaran vaikka masteriks tai muuten vaan haluut uudelleen nimetä haaran se tehdään ```git branch -m <haaran nimi> <uusi nimi>```\
