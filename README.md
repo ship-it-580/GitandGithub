@@ -15,17 +15,15 @@ Tosi hyvä komento tilanteen tarkstukseen on: ```git status``` se kertoo millä 
 sitten jos haluaa nähdä commitit tarkemmin niin siihen käytetään ```git log``` se antaa pirusti tietoa niin laittaa ```git log --oneline``` niin helpottaa kummasti
 
 ```mermaid
-stateDiagram
-  [*] --> Työkansio
-  Työkansio --> Indeksi
-  Indeksi --> Commit
-  Commit --> [*]
+  graph LR
+  Työkansio --> |git add| Indeksi
+  Indeksi --> |git commit| Commit
  ```
 
 Kun on tehny muutoksia niin pitää ensin lisätä tiedosto indexiin komennolla ```git add .<tiedoston nimi>``` tai jos laittaa kaiken niin ```git add .``` riittää\
 Sitten kun halutut tiedostot indexissä, ajaa vaan komennon ```git commit -m "tähä viesti mitä commitissa muutettin tai lisättiin"```\
 Jos paukautit väärän tiedoston indexiin, sen saa poist ```git unstage <tiedoston nimi>```\
-Jos on hyvä committi, mutta pikkasen huono sitä voi muokata komennolla ```git commit --amend -m "muutos mitä tullu tehtyä"```
+Jos on hyvä committi, mutta pikkasen huono sitä voi muokata komennolla ```git commit --amend -m "<muutos mitä tullu tehtyä>"```
 
 ---
 # Haarat
